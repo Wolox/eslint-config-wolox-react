@@ -1,0 +1,32 @@
+{
+  "name": "@wolox/eslint-config-react",
+  "version": "1.0.0",
+  "description": "Wolox's ESLint configuration for React projects ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wolox/eslint-config-wolox-react.git"
+  },
+  "keywords": [
+    "ESLint",
+    "React",
+    "Wolox"
+  ],
+  "author": "Damián Finkelstein <dfinkelstein@wolox.com.ar>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wolox/eslint-config-wolox-react/issues"
+  },
+  "homepage": "https://github.com/Wolox/eslint-config-wolox-react#readme",
+  "peerDependencies": {
+    "eslint": "5.5.0",
+    "eslint-config-wolox": "2.0.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}
