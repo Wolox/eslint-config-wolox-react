@@ -14,19 +14,20 @@ module.exports = {
     },
     sourceType: "module"
   },
-  plugins: ["react", "import", "jsx-a11y"],
+  plugins: ["react", "import", "jsx-a11y", "react-native"],
   extends: ["wolox"],
   globals: {
     __DEV__: true
   },
   rules: {
+    // Import
     "import/default": "error",
     "import/export": "error",
     "import/exports-last": "error",
     "import/extensions": [
       "error",
       "never",
-      { js: "never", svg: "always", scss: "always" }
+      { js: "never", svg: "always", scss: "always", png: "always", css: "always" }
     ],
     "import/first": "error",
     "import/named": "error",
@@ -43,15 +44,14 @@ module.exports = {
     "import/no-webpack-loader-syntax": "error",
     "import/order": ["error", { "newlines-between": "always" }],
     "import/prefer-default-export": "off",
+
+    // jsx-a11y
     "jsx-a11y/anchor-is-valid": "error",
+
+    // React
     "react/boolean-prop-naming": "error",
     "react/button-has-type": "error",
     "react/default-props-match-prop-types": "error",
-    "react/destructuring-assignment": [
-      2,
-      "always",
-      { ignoreClassFields: true }
-    ],
     "react/forbid-dom-props": ["error", { forbid: ["style", "id"] }],
     "react/forbid-prop-types": "error",
     "react/jsx-boolean-value": ["error", "never"],
@@ -132,6 +132,10 @@ module.exports = {
     ],
     "react/style-prop-object": "error",
     "react/void-dom-elements-no-children": "error"
+
+    // React Native
+    "no-colors-literals": "error",
+    "no-inline-styles": "error"
   },
   settings: {
     "import/resolver": {
