@@ -41,7 +41,7 @@ module.exports = {
           "UNSAFE_componentWillReceiveProps",
         ]
       }
-    ]
+    ],
 
     // Import
     "import/default": "error",
