@@ -20,6 +20,29 @@ module.exports = {
     __DEV__: true
   },
   rules: {
+    // eslint-config-wolox overrides
+    "class-methods-use-this": [
+      "error",
+      {
+        exceptMethods: [
+          "render",
+          "getInitialState",
+          "getDefaultProps",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "getSnapshotBeforeUpdate",
+          "UNSAFE_componentWillMount",
+          "UNSAFE_componentWillUpdate",
+          "UNSAFE_componentWillReceiveProps",
+        ]
+      }
+    ]
+
     // Import
     "import/default": "error",
     "import/export": "error",
@@ -27,7 +50,13 @@ module.exports = {
     "import/extensions": [
       "error",
       "never",
-      { js: "never", svg: "always", scss: "always", png: "always", css: "always" }
+      {
+        js: "never",
+        svg: "always",
+        scss: "always",
+        png: "always",
+        css: "always"
+      }
     ],
     "import/first": "error",
     "import/named": "error",
@@ -131,11 +160,11 @@ module.exports = {
       }
     ],
     "react/style-prop-object": "error",
-    "react/void-dom-elements-no-children": "error"
+    "react/void-dom-elements-no-children": "error",
 
     // React Native
-    "no-colors-literals": "error",
-    "no-inline-styles": "error"
+    "react-native/no-color-literals": "error",
+    "react-native/no-inline-styles": "error"
   },
   settings: {
     "import/resolver": {
