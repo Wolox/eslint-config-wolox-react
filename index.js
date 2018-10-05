@@ -4,7 +4,8 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
+    jest: true
   },
   parser: "babel-eslint",
   parserOptions: {
@@ -20,14 +21,42 @@ module.exports = {
     __DEV__: true
   },
   rules: {
+    // eslint-config-wolox overrides
+    "class-methods-use-this": [
+      "error",
+      {
+        exceptMethods: [
+          "render",
+          "getInitialState",
+          "getDefaultProps",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "getSnapshotBeforeUpdate",
+          "UNSAFE_componentWillMount",
+          "UNSAFE_componentWillUpdate",
+          "UNSAFE_componentWillReceiveProps"
+        ]
+      }
+    ],
+
     // Import
     "import/default": "error",
     "import/export": "error",
-    "import/exports-last": "error",
     "import/extensions": [
       "error",
       "never",
-      { js: "never", svg: "always", scss: "always", png: "always", css: "always" }
+      {
+        js: "never",
+        svg: "always",
+        scss: "always",
+        png: "always",
+        css: "always"
+      }
     ],
     "import/first": "error",
     "import/named": "error",
@@ -79,6 +108,7 @@ module.exports = {
     "react/jsx-props-no-multi-spaces": "error",
     "react/jsx-sort-default-props": "error",
     "react/jsx-tag-spacing": ["error", { beforeClosing: "never" }],
+    "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-wrap-multilines": [
       "error",
@@ -131,11 +161,11 @@ module.exports = {
       }
     ],
     "react/style-prop-object": "error",
-    "react/void-dom-elements-no-children": "error"
+    "react/void-dom-elements-no-children": "error",
 
     // React Native
-    "no-colors-literals": "error",
-    "no-inline-styles": "error"
+    "react-native/no-color-literals": "error",
+    "react-native/no-inline-styles": "error"
   },
   settings: {
     "import/resolver": {
