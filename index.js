@@ -4,7 +4,8 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
+    jest: true
   },
   parser: "babel-eslint",
   parserOptions: {
@@ -38,7 +39,7 @@ module.exports = {
           "getSnapshotBeforeUpdate",
           "UNSAFE_componentWillMount",
           "UNSAFE_componentWillUpdate",
-          "UNSAFE_componentWillReceiveProps",
+          "UNSAFE_componentWillReceiveProps"
         ]
       }
     ],
@@ -46,7 +47,6 @@ module.exports = {
     // Import
     "import/default": "error",
     "import/export": "error",
-    "import/exports-last": "error",
     "import/extensions": [
       "error",
       "never",
@@ -108,6 +108,7 @@ module.exports = {
     "react/jsx-props-no-multi-spaces": "error",
     "react/jsx-sort-default-props": "error",
     "react/jsx-tag-spacing": ["error", { beforeClosing: "never" }],
+    "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-wrap-multilines": [
       "error",
