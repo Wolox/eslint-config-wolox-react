@@ -15,7 +15,7 @@ module.exports = {
     },
     sourceType: "module"
   },
-  plugins: ["react", "import", "jsx-a11y", "react-native"],
+  plugins: ["react", "import", "jsx-a11y", "react-native", "babel"],
   extends: ["wolox"],
   globals: {
     __DEV__: true
@@ -43,6 +43,12 @@ module.exports = {
         ]
       }
     ],
+    indent: "off",
+    "no-mixed-operators": "off",
+    "no-unused-expressions": "off",
+
+    // Babel
+    "babel/no-unused-expressions": 1,
 
     // Import
     "import/default": "error",
@@ -111,15 +117,7 @@ module.exports = {
     "react/jsx-uses-vars": "error",
     "react/jsx-wrap-multilines": [
       "error",
-      {
-        declaration: "parens-new-line",
-        assignment: "parens-new-line",
-        return: "parens-new-line",
-        arrow: "parens-new-line",
-        condition: "parens-new-line",
-        logical: "parens-new-line",
-        prop: "parens-new-line"
-      }
+      { declaration: false, assignment: false }
     ],
     "react/forbid-foreign-prop-types": "error",
     "react/no-access-state-in-setstate": "error",
