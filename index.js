@@ -46,6 +46,7 @@ module.exports = {
     indent: "off",
     "no-mixed-operators": "off",
     "no-unused-expressions": "off",
+    "no-extra-parens": "off",
 
     // Babel
     "babel/no-unused-expressions": 1,
@@ -65,9 +66,7 @@ module.exports = {
       }
     ],
     "import/first": "error",
-    "import/named": "error",
     "import/namespace": "error",
-    "import/newline-after-import": "error",
     "import/no-absolute-path": "error",
     "import/no-extraneous-dependencies": "error",
     "import/no-mutable-exports": "error",
@@ -75,7 +74,6 @@ module.exports = {
     "import/no-named-default": "error",
     "import/no-self-import": "error",
     "import/no-unresolved": "error",
-    "import/no-useless-path-segments": "error",
     "import/no-webpack-loader-syntax": "error",
     "import/order": ["error", { "newlines-between": "always" }],
     "import/prefer-default-export": "off",
