@@ -15,7 +15,14 @@ module.exports = {
     },
     sourceType: "module"
   },
-  plugins: ["react", "import", "jsx-a11y", "react-native", "babel"],
+  plugins: [
+    "react",
+    "import",
+    "jsx-a11y",
+    "react-native",
+    "babel",
+    "react-hooks"
+  ],
   extends: ["wolox"],
   globals: {
     __DEV__: true
@@ -62,7 +69,8 @@ module.exports = {
         svg: "always",
         scss: "always",
         png: "always",
-        css: "always"
+        css: "always",
+        json: "always"
       }
     ],
     "import/first": "error",
@@ -70,12 +78,26 @@ module.exports = {
     "import/no-absolute-path": "error",
     "import/no-extraneous-dependencies": "error",
     "import/no-mutable-exports": "error",
+    "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "error",
     "import/no-named-default": "error",
     "import/no-self-import": "error",
     "import/no-unresolved": "error",
     "import/no-webpack-loader-syntax": "error",
-    "import/order": ["error", { "newlines-between": "always" }],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        groups: [
+          "builtin",
+          "external",
+          ["unknown", "internal"],
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ],
     "import/prefer-default-export": "off",
 
     // jsx-a11y
@@ -103,7 +125,7 @@ module.exports = {
     "react/jsx-indent": ["error", 2],
     "react/jsx-key": "error",
     "react/jsx-max-depth": ["error", { max: 6 }],
-    "react/jsx-no-bind": "error",
+    "react/jsx-no-bind": ["error", { allowArrowFunctions: true }],
     "react/jsx-no-comment-textnodes": "error",
     "react/jsx-no-duplicate-props": "error",
     "react/jsx-no-target-blank": "error",
@@ -158,14 +180,14 @@ module.exports = {
     "react/style-prop-object": "error",
     "react/void-dom-elements-no-children": "error",
 
-    // React Native
-    "react-native/no-color-literals": "error",
-    "react-native/no-inline-styles": "error"
+    // React Hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".js", ".android.js", ".ios.js"]
+        extensions: [".js"]
       }
     }
   }
