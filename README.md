@@ -1,6 +1,6 @@
 # eslint-config-wolox-react
 
-Linter that extends from [wolox-linter](https://github.com/Wolox/eslint-config-wolox/) used for Wolox React proyects.
+Linter that extends from [wolox-linter](https://github.com/Wolox/eslint-config-wolox/) used for Wolox React projects.
 
 ## Contributing
 
