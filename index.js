@@ -15,14 +15,7 @@ module.exports = {
     },
     sourceType: "module"
   },
-  plugins: [
-    "react",
-    "import",
-    "jsx-a11y",
-    "react-native",
-    "babel",
-    "react-hooks"
-  ],
+  plugins: ["react", "import", "jsx-a11y", "babel", "react-hooks"],
   extends: ["wolox"],
   globals: {
     __DEV__: true
