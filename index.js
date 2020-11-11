@@ -15,12 +15,15 @@ module.exports = {
     },
     sourceType: "module"
   },
-  plugins: ["react", "import", "jsx-a11y", "babel", "react-hooks"],
+  plugins: ["react", "import", "jsx-a11y", "babel", "react-hooks", "prettier"],
   extends: ["wolox"],
   globals: {
     __DEV__: true
   },
   rules: {
+    // prettier overrides
+    "prettier/prettier": ["error", { printWidth: 110, singleQuote: true, trailingComma: "none" }]
+
     // eslint-config-wolox overrides
     "class-methods-use-this": [
       "error",
