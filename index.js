@@ -22,7 +22,7 @@ module.exports = {
   },
   rules: {
     // prettier overrides
-    "prettier/prettier": ["error", { printWidth: 110, singleQuote: true, trailingComma: "none" }]
+    "prettier/prettier": ["error", { printWidth: 110, singleQuote: true, trailingComma: "none" }],
 
     // eslint-config-wolox overrides
     "class-methods-use-this": [
