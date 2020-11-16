@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wolox-react",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Wolox's ESLint configuration for React projects ",
   "main": "index.js",
   "repository": {
